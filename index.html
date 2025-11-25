@@ -1,0 +1,238 @@
+!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solar Aña - Proyecto</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0d0b21, #1b1440);
+  margin: 0;
+  color: #f0f0ff;
+}
+header {
+  text-align: center;
+  padding: 60px 0;
+  background: linear-gradient(135deg, #6a00f4, #24007a);
+  box-shadow: 0 0 35px rgba(150, 80, 255, 0.5);
+  border-bottom: 3px solid #824bff;
+}
+header h1, header h2 {
+  animation: fadeIn 1.2s ease forwards;
+}
+.cuartilla {
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 50px;
+  box-shadow: 0 0 30px rgba(120, 60, 255, 0.3);
+  animation: slideUp 0.7s ease;
+}
+h2 { color: #d2caff; text-shadow: 0 0 10px rgba(200, 160, 255, 0.4); }
+h3 { color: #d2caff; text-shadow: 0 0 10px rgba(200, 160, 255, 0.4); }
+
+
+ul li { margin-top: 8px; }
+.boton {
+  background: linear-gradient(135deg, #5a00c9, #b066ff);
+  padding: 12px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(160, 80, 255, 0.5);
+}
+.boton:hover { transform: scale(1.07); box-shadow: 0 0 25px rgba(200, 120, 255, 0.85); }
+.hidden-page { display: none; }
+img.display-img { width: 100%; border-radius: 18px; margin: 25px 0; box-shadow: 0 0 25px rgba(180, 140, 255, 0.4); animation: fadeIn 1.2s ease; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</head>
+<body>
+
+
+
+
+<nav class="navbar navbar-expand-lg sticky-top" style="background-color: #140f2b; border-bottom: 1px solid #3d2b6b;">
+  <div class="container-fluid">
+    <a class="navbar-brand" style="color:#d2caff; font-weight:bold;">Solar Aña</a>
+  </div>
+</nav>
+
+
+
+
+<!-- Página 1 -->
+<section class="cuartilla" id="pagina-1">
+<header>
+<h1>Solar Aña</h1>
+<p class="subtitle">Soluciones de energía solar inteligente para empresas y operaciones industriales</p>
+</header>
+<img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231" class="display-img"/>
+<p>Solar Aña se dedica a distribuir y ofrecer soluciones solares avanzadas, ayudando a empresas a reducir costos, optimizar su energía y cuidar el planeta.</p>
+<div style="text-align:center;">
+<a href="#" class="boton" onclick="nextPage(2)">Siguiente página ➡</a>
+</div>
+</section>
+
+
+
+
+<!-- Página 2 -->
+<section class="cuartilla hidden-page" id="pagina-2">
+<h2>Beneficios Económicos y Ambientales</h2>
+<img src="https://fde-prod-shared0-bng4e3axevdaf4ae.z02.azurefd.net/proportadapintegral_pi/sites/default/files/blog/44500/field_foto/economia-sostenible.jpg" class="display-img"/>
+<p>Implementar energía solar reduce gastos operativos y protege el medio ambiente. Además, la inversión se amortiza rápidamente gracias a incentivos y ahorro energético.</p>
+<div style="text-align:center;">
+<a href="#" class="boton" onclick="nextPage(3)">Siguiente página ➡</a>
+<a href="#" class="boton" onclick="prevPage(1)">⬅ Regresar</a>
+</div>
+</section>
+
+
+
+
+<!-- Página 3 -->
+<section class="cuartilla hidden-page" id="pagina-3">
+<h2>Productos y Servicios Futuristas</h2>
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Photovoltaik_Dachanlage_Hannover_-_Schwarze_Heide_-_1_MW.jpg/330px-Photovoltaik_Dachanlage_Hannover_-_Schwarze_Heide_-_1_MW.jpg" class="d-block w-100" alt="pane solar">
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.correosclic.gob.mx/images/thumbs/0026528_cargador-inteligente-bateria-acumulador-coche-motocicleta-camioneta-reparacion-pantalla-lcd-6a-12v.jpeg" class="d-block w-100" alt="bateria inteligente">
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.primenergy.es/wp-content/uploads/2023/01/apps-utiles-ahorro.jpg" class="d-block w-100" alt="app inteligente">
+    </div>
+  </div>
+  <div class="carousel-item">
+      <img src="https://comuval.com/images/imagenes-blog/paneles-solares-instalaciones-electricas-valencia.jpg" class="d-block w-100" alt="Serivicio de instalacion">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">siguyiente</span>
+  </button>
+</div>
+<ul>
+<li><strong>Solar Aña Orion Panel™</strong> – Paneles solares ultrafinos que funcionan incluso en días nublados.</li>
+<li><strong>Aña Core Quantum Battery™</strong> – Batería inteligente con administración automática de energía.</li>
+<li><strong>NebulaGrid™ Smart App</strong> – App para monitorear y controlar el flujo energético en tiempo real.</li>
+<li><strong>Instalación AñaTech Pro</strong> – Instalación profesional con soporte completo 24/7.</li>
+</ul>
+<div style="text-align:center;">
+<a href="#" class="boton" onclick="nextPage(4)">Siguiente página ➡</a>
+<a href="#" class="boton" onclick="prevPage(2)">⬅ Regresar</a>
+</div>
+</section>
+
+
+
+
+<!-- Página 4 -->
+<section class="cuartilla hidden-page" id="pagina-4">
+<h2>Impacto Social y Futuro</h2>
+<img src="https://images.unsplash.com/photo-1526498460520-4c246339dccb" class="display-img"/>
+<p>Solar Aña ayuda a empresas a reducir su huella de carbono, generar empleos verdes y fomentar un desarrollo más sostenible para las comunidades.</p>
+<div style="text-align:center;">
+<a href="#" class="boton" onclick="nextPage(5)">Siguiente página ➡</a>
+<a href="#" class="boton" onclick="prevPage(3)">⬅ Regresar</a>
+</div>
+</section>
+
+
+
+
+<!---- Página 5 -->
+<section class="cuartilla hidden-page" id="pagina-5">
+<h2>Conclusión y Fuente</h2>
+<img src="https://www.repsol.com/content/dam/repsol-corporate/es/energia-e-innovacion/energia%20electrica%20cables%20alta%20tension.jpg" class="display-img"/>
+<p>Adoptar la energía solar es clave para un futuro sostenible y rentable. Solar Aña se posiciona como líder en soluciones avanzadas, apoyando los objetivos del Proyecto 2030.
+   
+</p>
+<h3> Por eso y más, SOLAR AÑA ES LA OPCION</h3>
+<div style="text-align:center;">
+    <a href="#" class="boton" onclick="nextPage(6)">Siguiente página ➡</a>
+<a href="#" class="boton" onclick="prevPage(4)">⬅ Regresar</a>
+</div>
+<footer>
+</footer>
+</section>
+
+
+
+
+<!-- Página 6 -->
+<section class="cuartilla hidden-page" id="pagina-6">
+<h2>Contáctanos</h2>
+<img src="https://cdn0.uncomo.com/es/posts/0/8/7/como_encontrar_las_mejores_formas_de_contacto_de_las_empresas_50780_orig.jpg" class="display-img"/>
+<p>NÚMERO DE TELEFONO</p>
+<p>+52 5503940293</p>
+<p>+52 5568856623
+</p>
+<h2> Página elaborada por:</h2>
+<p>Aguirre Santiago Javier
+</p>
+<p>Cosío Pérez Ian Luca
+</p>
+<p>Huizar Soler Emiliano</p>
+<p>Maya Meneses Edur Dunixi
+</p>
+<p>Quintero Gonzales Sarah.
+</p>
+<div style="text-align:center;">
+<a href="#" class="boton" onclick="prevPage(5)">⬅ Regresar</a>
+</div>
+<footer>
+<p>&copy; 2025 Solar Aña | Todos los derechos reservados.</p>
+</footer>
+</section>
+
+
+
+
+<script>
+function nextPage(pageNumber) {
+  document.querySelectorAll('.cuartilla').forEach(p => p.classList.add('hidden-page'));
+  document.getElementById('pagina-' + pageNumber).classList.remove('hidden-page');
+}
+function prevPage(pageNumber) {
+  document.querySelectorAll('.cuartilla').forEach(p => p.classList.add('hidden-page'));
+  document.getElementById('pagina-' + pageNumber).classList.remove('hidden-page');
+}
+</script>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         
